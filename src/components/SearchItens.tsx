@@ -62,7 +62,7 @@ const SearchItens = () => {
       </div>
       
 
-      <ScrollArea className="h-[352px] w-full rounded-md border">
+      <ScrollArea className="h-[327px] w-full rounded-md border">
       <div className="p-4">
         <h4 className="mb-4 text-sm font-medium leading-none">Lista de itens</h4>
         {tags.map((tag) => (

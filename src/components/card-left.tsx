@@ -3,7 +3,7 @@ import SearchItens from './SearchItens';
 
 const CardLeft = () => {
   return (
-    <div className="flex flex-col w-1/2 p-4">
+    <div className="flex flex-col w-1/2 p-0">
       <SearchItens />
     </div>
   );
