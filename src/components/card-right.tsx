@@ -1,9 +1,10 @@
+'use client'
 import React from 'react';
+import Image from 'next/image';
 import { CardTitle, CardDescription } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Input } from '@/components/ui/input';
 import { Button } from "@/components/ui/button";
-import itemIcon from '../assets/images/Item_Icon/i_ts_59_01.png';
 
 
 const CardRight = () => {
@@ -43,9 +44,16 @@ const CardRight = () => {
             </div>
           </div>
           <div className="flex-1 w-full">
-                <div className="flex flex-col w-full gap-2 mr-4 mt-4">
+                <div className="flex flex-col w-full gap-2 mr-4 mt-2">
                     <h3 className="text-sm font-semibold">Icone do item</h3>
-                    <img src={itemIcon} alt="Ícone do Item" className="w-6 h-6" />
+                    <div className="relative w-[105px] h-[97px] border rounded-md overflow-hidden"> {/* Quadrado com borda de 50x50px */}
+                    <Image
+                      src="/assets/images/Item_Icon/e_ts_05_04_jp.png"
+                      alt="Icone do item"
+                      layout="fill"
+                      objectFit="contain" // A imagem será redimensionada para caber dentro do quadrado sem ser cortada
+                    />
+                  </div>
                 </div>
                 </div>
         </div>

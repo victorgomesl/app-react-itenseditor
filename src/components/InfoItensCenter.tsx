@@ -65,6 +65,7 @@ export function InfoItensCenter() {
             setIsDescricaoToastShown(false);
         }
     }
+    
 
     return (
 

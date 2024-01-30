@@ -1,13 +1,40 @@
 import React from 'react';
 import { Command, CommandInput } from "@/components/ui/command";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
 
-const tags = Array.from({ length: 50 }).map(
-  (_, i, a) => `Item.${a.length - i}`
-);
+const listadeitens = [
+  {
+    iddoitem: "134219836",
+    nomedoitem: "Fruit Cake Hat (N)",
+  },
+  {
+    iddoitem: "134258727",
+    nomedoitem: "Baseball Pants",
+  },
+  {
+    iddoitem: "134218752",
+    nomedoitem: "Basic Head",
+  },
+  {
+    iddoitem: "134318085",
+    nomedoitem: "Blooming Crown (N)",
+  },
+  {
+    iddoitem: "134242338",
+    nomedoitem: "Cadet Jacket",
+  },
+  {
+    iddoitem: "134283296",
+    nomedoitem: "Christmas Shoes (N)",
+  },
+  {
+    iddoitem: "134283270",
+    nomedoitem: "Danger Lows",
+  },
+]
 
 const SearchItens = () => {
   return (
@@ -63,16 +90,23 @@ const SearchItens = () => {
       
 
       <ScrollArea className="h-[327px] w-full rounded-md border">
-      <div className="p-4">
-        <h4 className="mb-4 text-sm font-medium leading-none">Lista de itens</h4>
-        {tags.map((tag) => (
-          <>
-            <div key={tag} className="text-sm">
-              {tag}
-            </div>
-            <Separator className="my-2" />
-          </>
-        ))}
+      <div className="p-0">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[100px]">TypeID</TableHead>
+                  <TableHead>Nome</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+              {listadeitens.map((item) => (
+                <TableRow key={item.iddoitem}>
+                  <TableCell className="font-medium">{item.iddoitem}</TableCell>
+                  <TableCell>{item.nomedoitem}</TableCell>
+                </TableRow>
+              ))}
+              </TableBody>
+            </Table>
       </div>
     </ScrollArea>
     </div>

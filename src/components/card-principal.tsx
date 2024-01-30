@@ -8,9 +8,9 @@ import CardRight from './card-right';
 export default function CardPrincipal() {
   return (
     <div className="mx-auto max-w-[calc(100vw-100px)]">
-      <Card className="pl-7 w-[1230px] h-[600px] ">
+      <Card className="pl-7 w-[1230px] h-[600px]">
         <CardHead />
-        <div className="flex mx-0">
+        <div className="flex mx-5">
           <CardLeft />
           <CardCenter />
           <CardRight />
